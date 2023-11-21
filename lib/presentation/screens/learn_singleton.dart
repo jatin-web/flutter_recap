@@ -13,7 +13,7 @@ class _LearnSingletonState extends State<LearnSingleton> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Learn Singleton")),
+      appBar: AppBar(title: const Text("Singleton")),
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.all(15),

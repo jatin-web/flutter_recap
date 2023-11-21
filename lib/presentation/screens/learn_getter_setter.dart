@@ -21,7 +21,7 @@ class _LearnGetterSetterState extends State<LearnGetterSetter> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Learn Getter and Setter"),
+        title: const Text("Getter and Setter"),
       ),
       body: Container(
         padding: const EdgeInsets.all(20),

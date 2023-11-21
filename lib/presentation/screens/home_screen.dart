@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_recap/presentation/screens/learn_abstract_class.dart';
 import 'package:flutter_recap/presentation/screens/learn_extensions.dart';
 import 'package:flutter_recap/presentation/screens/learn_getter_setter.dart';
-import 'package:flutter_recap/presentation/screens/learn_oops.dart';
+import 'package:flutter_recap/presentation/screens/learn_encapsulation.dart';
 import 'package:flutter_recap/presentation/screens/learn_singleton.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -36,9 +36,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("Learn OOPS"),
+            title: const Text("Learn Encapsulation"),
             onTap: () {
-              Navigator.pushNamed(context, LearnOOPS.routeName);
+              Navigator.pushNamed(context, LearnEncapsulation.routeName);
             },
           ),
           ListTile(

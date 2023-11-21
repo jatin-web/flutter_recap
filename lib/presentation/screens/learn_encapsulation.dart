@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_recap/data/models/encapsulation.dart';
 import 'package:flutter_recap/presentation/widgets/containers/note_container.dart';
 
-class LearnOOPS extends StatefulWidget {
-  static const String routeName = "learn_oops";
-  const LearnOOPS({super.key});
+class LearnEncapsulation extends StatefulWidget {
+  static const String routeName = "learn_encapsulation";
+  const LearnEncapsulation({super.key});
 
   @override
-  State<LearnOOPS> createState() => _LearnOOPSState();
+  State<LearnEncapsulation> createState() => _LearnEncapsulationState();
 }
 
-class _LearnOOPSState extends State<LearnOOPS> {
+class _LearnEncapsulationState extends State<LearnEncapsulation> {
   final TextEditingController _controller = TextEditingController();
   EncapsulationTest encap = EncapsulationTest();
 
@@ -20,7 +20,7 @@ class _LearnOOPSState extends State<LearnOOPS> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Learn OOPS"),
+        title: const Text("Encapsulation"),
       ),
       body: Container(
         width: double.infinity,
@@ -30,7 +30,7 @@ class _LearnOOPSState extends State<LearnOOPS> {
           children: [
             const NoteContainer(
                 body:
-                    "Note that we cannot access the fields of the EncapsulationTest class directly, We need to use the getter and setter method to access them."),
+                    "Note that we cannot access the fields of the EncapsulationTest class directly, We need to use the getter and setter method to access them. We have done that by creating private fields using _ in front of fields"),
             const SizedBox(height: 50),
             TextField(
               controller: _controller,
