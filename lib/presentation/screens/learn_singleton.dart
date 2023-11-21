@@ -20,16 +20,21 @@ class _LearnSingletonState extends State<LearnSingleton> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              "Check Logs to understand better",
+              style: TextStyle(color: Colors.grey, fontSize: 18),
+            ),
+            const SizedBox(height: 100),
             // Text
             Text(
-              MySingleton().getVal().toString(),
+              CountSingleton().getVal().toString(),
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
 
             // Increment Button
             ElevatedButton(
                 onPressed: () {
-                  MySingleton singleton = MySingleton();
+                  CountSingleton singleton = CountSingleton();
                   singleton.increment();
                   setState(() {});
                 },
@@ -38,7 +43,7 @@ class _LearnSingletonState extends State<LearnSingleton> {
             // Decrement Button
             ElevatedButton(
                 onPressed: () {
-                  MySingleton singleton = MySingleton();
+                  CountSingleton singleton = CountSingleton();
                   singleton.decrement();
                   setState(() {});
                 },
