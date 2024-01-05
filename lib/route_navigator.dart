@@ -4,6 +4,7 @@ import 'package:flutter_recap/presentation/screens/learn_abstract_class.dart';
 import 'package:flutter_recap/presentation/screens/learn_extensions.dart';
 import 'package:flutter_recap/presentation/screens/learn_getter_setter.dart';
 import 'package:flutter_recap/presentation/screens/learn_encapsulation.dart';
+import 'package:flutter_recap/presentation/screens/learn_isolates.dart';
 import 'package:flutter_recap/presentation/screens/learn_singleton.dart';
 
 class RouteNavigator {
@@ -22,6 +23,8 @@ class RouteNavigator {
         return MaterialPageRoute(builder: (_) => const LearnEncapsulation());
       case LearnGetterSetter.routeName:
         return MaterialPageRoute(builder: (_) => const LearnGetterSetter());
+      case LearnIsolateScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const LearnIsolateScreen());
       default:
         return MaterialPageRoute(
             builder: (_) =>
