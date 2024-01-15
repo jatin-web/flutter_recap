@@ -8,10 +8,10 @@ class CountSingleton {
   late int val;
 
   // STEP 1: Create an instance of My singleton class
-  static final CountSingleton _instance = CountSingleton._internal();
+  static final CountSingleton _instance = CountSingleton._();
 
   // STEP 2: Make Singleton Constructor [This constructor will run only once]
-  CountSingleton._internal() {
+  CountSingleton._() {
     log("Singleton constructor called");
     val = 0;
   }
