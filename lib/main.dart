@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_recap/presentation/screens/home_screen.dart';
 import 'package:flutter_recap/route_navigator.dart';
+import 'package:flutter_recap/service_locator.dart';
 
 void main() {
+  serviceLocator();
   runApp(const MyApp());
 }
 

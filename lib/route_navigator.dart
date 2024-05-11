@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_recap/presentation/screens/home_screen.dart';
 import 'package:flutter_recap/presentation/screens/learn_abstract_class.dart';
 import 'package:flutter_recap/presentation/screens/learn_extensions.dart';
+import 'package:flutter_recap/presentation/screens/learn_get_it_service_locator.dart';
 import 'package:flutter_recap/presentation/screens/learn_getter_setter.dart';
 import 'package:flutter_recap/presentation/screens/learn_encapsulation.dart';
 import 'package:flutter_recap/presentation/screens/learn_isolates.dart';
@@ -25,6 +26,9 @@ class RouteNavigator {
         return MaterialPageRoute(builder: (_) => const LearnGetterSetter());
       case LearnIsolateScreen.routeName:
         return MaterialPageRoute(builder: (_) => const LearnIsolateScreen());
+      case LearnGetItServiceLocator.routeName:
+        return MaterialPageRoute(
+            builder: (_) => const LearnGetItServiceLocator());
       default:
         return MaterialPageRoute(
             builder: (_) =>

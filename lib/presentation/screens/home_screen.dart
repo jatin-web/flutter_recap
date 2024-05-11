@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_recap/presentation/screens/learn_abstract_class.dart';
 import 'package:flutter_recap/presentation/screens/learn_extensions.dart';
+import 'package:flutter_recap/presentation/screens/learn_get_it_service_locator.dart';
 import 'package:flutter_recap/presentation/screens/learn_getter_setter.dart';
 import 'package:flutter_recap/presentation/screens/learn_encapsulation.dart';
 import 'package:flutter_recap/presentation/screens/learn_isolates.dart';
@@ -52,6 +53,12 @@ class HomeScreen extends StatelessWidget {
             title: const Text("Learn Isolates"),
             onTap: () {
               Navigator.pushNamed(context, LearnIsolateScreen.routeName);
+            },
+          ),
+          ListTile(
+            title: const Text("Learn Get It"),
+            onTap: () {
+              Navigator.pushNamed(context, LearnGetItServiceLocator.routeName);
             },
           ),
         ],
