@@ -15,54 +15,82 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Screen"),
+        title: const Text("Flutter Recap"),
+        backgroundColor: Colors.purple.withOpacity(0.2),
+        elevation: 0,
       ),
-      body: Column(
-        children: [
-          ListTile(
-            title: const Text("Learn Singleton"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnSingleton.routeName);
-            },
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MyTile(
+                title: const Text("Learn Singleton"),
+                onTap: () {
+                  Navigator.pushNamed(context, LearnSingleton.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Extensions"),
+                onTap: () {
+                  Navigator.pushNamed(context, LearnExtensions.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Abstract class"),
+                onTap: () {
+                  Navigator.pushNamed(
+                      context, LearnAbstractClassScreen.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Encapsulation"),
+                onTap: () {
+                  Navigator.pushNamed(context, LearnEncapsulation.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Getter and Setter"),
+                onTap: () {
+                  Navigator.pushNamed(context, LearnGetterSetter.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Isolates"),
+                onTap: () {
+                  Navigator.pushNamed(context, LearnIsolateScreen.routeName);
+                },
+              ),
+              MyTile(
+                title: const Text("Learn Get It"),
+                onTap: () {
+                  Navigator.pushNamed(
+                      context, LearnGetItServiceLocator.routeName);
+                },
+              ),
+            ],
           ),
-          ListTile(
-            title: const Text("Learn Extensions"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnExtensions.routeName);
-            },
-          ),
-          ListTile(
-            title: const Text("Learn Abstract class"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnAbstractClassScreen.routeName);
-            },
-          ),
-          ListTile(
-            title: const Text("Learn Encapsulation"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnEncapsulation.routeName);
-            },
-          ),
-          ListTile(
-            title: const Text("Learn Getter and Setter"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnGetterSetter.routeName);
-            },
-          ),
-          ListTile(
-            title: const Text("Learn Isolates"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnIsolateScreen.routeName);
-            },
-          ),
-          ListTile(
-            title: const Text("Learn Get It"),
-            onTap: () {
-              Navigator.pushNamed(context, LearnGetItServiceLocator.routeName);
-            },
-          ),
-        ],
+        ),
       ),
     );
+  }
+}
+
+class MyTile extends StatelessWidget {
+  const MyTile({super.key, required this.title, required this.onTap});
+  final Widget title;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: const EdgeInsets.only(bottom: 15),
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey),
+            borderRadius: BorderRadius.circular(5)),
+        child: ListTile(
+          title: title,
+          onTap: onTap,
+        ));
   }
 }
