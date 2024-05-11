@@ -3,25 +3,54 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 // --------------------- Abstract classes --------------------
-abstract class Hello {
-  String myName = "Jatin";
+abstract class Shape {
+  double calculateArea();
+  double calculateParameters();
 
-  void display() {
-    log("Display method in abstract class");
+  void printDetails() {
+    debugPrint("Print Details Function from abstract class");
   }
 }
 
-class Hi extends Hello {
+class Rectangle implements Shape {
   @override
-  String myName = "Saini ji";
+  double calculateArea() {
+    debugPrint("Calculate Rectangle Area");
+    return 0;
+  }
 
   @override
-  void display() {
-    log(myName);
+  double calculateParameters() {
+    debugPrint("Calculate Rectangle Parameter");
+    return 0;
+  }
+
+  @override
+  void printDetails() {
+    // If we have used extends keyword instead, then we do not necessarily need to define this method
+    debugPrint("Print Details Functio from Rectangle");
   }
 }
 
-class Hi2 extends Hi {}
+class Circle implements Shape {
+  @override
+  double calculateArea() {
+    debugPrint("Calculate Circle Area");
+    return 0;
+  }
+
+  @override
+  double calculateParameters() {
+    debugPrint("Calculate Circle Parameter");
+    return 0;
+  }
+
+  @override
+  void printDetails() {
+    // If we have used extends keyword instead, then we do not necessarily need to define this method
+    debugPrint("Print Details Functio from Circle");
+  }
+}
 
 // ---------------------- Widgets -----------------------
 
@@ -42,8 +71,8 @@ class _LearnAbstractClassScreenState extends State<LearnAbstractClassScreen> {
   }
 
   learn() {
-    Hi2 hi = Hi2();
-    hi.display();
+    Shape shape = Rectangle();
+    shape.calculateArea();
   }
 
   @override
